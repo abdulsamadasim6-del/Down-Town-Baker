@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Down Town Baker | Freshly Baked, Made with Love</title>
+
+    <meta name="description"
+          content="Down Town Baker - Fresh Pakistani bakery items, cakes, brownies, chicken bread, focaccia bread, nan khatai and more.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-cake-candles"></i>
+            </span>
+
+            <span>
+                <strong>Down Town</strong>
+                <small>Baker</small>
+            </span>
+        </a>
+
+        <nav id="navMenu">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Menu</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <a class="nav-order"
+           href="https://wa.me/923172171649"
+           target="_blank">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Order Now
+
+        </a>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="welcome">
+                WELCOME TO DOWN TOWN BAKER
+            </span>
+
+            <h1>
+                Freshly Baked,
+                <span>Made with Love.</span>
+            </h1>
+
+            <p>
+                Delicious Pakistani bakery favorites, freshly prepared
+                with quality ingredients and a whole lot of love.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn primary-btn">
+                    Explore Our Menu
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="https://wa.me/923172171649"
+                   target="_blank"
+                   class="btn whatsapp-btn">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div>
+                    <i class="fa-solid fa-bread-slice"></i>
+                    <span>Fresh Daily</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Made with Love</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <span>Easy Ordering</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <div class="image-card">
+
+                <div class="fake-bakery-image">
+                    <i class="fa-solid fa-bread-slice"></i>
+                    <p>DOWN TOWN BAKER</p>
+                </div>
+
+            </div>
+
+            <div class="experience">
+
+                <strong>100%</strong>
+                <span>Fresh & Delicious</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                OUR STORY
+            </span>
+
+            <h2>
+                A Little Taste of
+                <span>Happiness</span>
+            </h2>
+
+            <p>
+                At Down Town Baker, we believe that every bite should
+                bring a little happiness to your day.
+            </p>
+
+            <p>
+                From traditional Pakistani favorites to delicious cakes
+                and brownies, our bakery brings you freshly prepared
+                treats made with care and quality ingredients.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Freshly Prepared</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Quality Ingredients</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Pakistani Bakery Favorites</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Made with Care</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products section" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR MENU
+            </span>
+
+            <h2>
+                Fresh From Our
+                <span>Bakery</span>
+            </h2>
+
+            <p>
+                Choose your favorite treat and place your order directly
+                through WhatsApp.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filters">
+
+            <button class="filter active"
+                    onclick="filterProducts('all')">
+                All
+            </button>
+
+            <button class="filter"
+                    onclick="filterProducts('bread')">
+                Breads
+            </button>
+
+            <button class="filter"
+                    onclick="filterProducts('sweet')">
+                Sweets
+            </button>
+
+            <button class="filter"
+                    onclick="filterProducts('cake')">
+                Cakes
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card" data-category="bread">
+
+                <div class="product-image">
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+
+                    <span class="badge">Popular</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        BREAD
+                    </span>
+
+                    <h3>Focaccia Bread</h3>
+
+                    <p>
+                        Soft, flavorful and freshly baked.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Focaccia Bread')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card" data-category="sweet">
+
+                <div class="product-image">
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        SWEET
+                    </span>
+
+                    <h3>Nan Khatai</h3>
+
+                    <p>
+                        Classic Pakistani buttery cookies.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Nan Khatai')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card" data-category="bread">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+
+                    <span class="badge">
+                        Bestseller
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        SAVORY
+                    </span>
+
+                    <h3>Chicken Bread</h3>
+
+                    <p>
+                        Deliciously filled and freshly baked.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Chicken Bread')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product-card" data-category="sweet">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        CAKE
+                    </span>
+
+                    <h3>Tea Cake</h3>
+
+                    <p>
+                        Soft and delicious, perfect with tea.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Tea Cake')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+
+            <article class="product-card" data-category="sweet">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-cookie"></i>
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        SWEET
+                    </span>
+
+                    <h3>Brownie</h3>
+
+                    <p>
+                        Rich, soft and chocolatey.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Brownie')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product-card" data-category="cake">
+
+                <div class="product-image">
+
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+
+                    <span class="badge">
+                        Custom
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        CAKES
+                    </span>
+
+                    <h3>Custom Cakes</h3>
+
+                    <p>
+                        Beautiful cakes for birthdays and celebrations.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Order for Price</strong>
+
+                        <button onclick="orderProduct('Custom Cake')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="all-items">
+
+            <p>
+                Looking for something else?
+            </p>
+
+            <a href="https://wa.me/923172171649"
+               target="_blank"
+               class="btn outline-btn">
+
+                Ask About All Bakery Items
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-us section" id="why-us">
+
+    <div class="container">
+
+        <div class="section-heading light">
+
+            <span class="section-label">
+                WHY DOWN TOWN BAKER
+            </span>
+
+            <h2>
+                Baked With
+                <span>Passion</span>
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                </div>
+
+                <h3>Quality Ingredients</h3>
+
+                <p>
+                    We focus on quality ingredients to give you
+                    delicious bakery products.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+
+                <h3>Freshly Baked</h3>
+
+                <p>
+                    Fresh bakery items prepared with care for
+                    maximum taste and freshness.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>Made With Love</h3>
+
+                <p>
+                    Every product is prepared with attention,
+                    passion and care.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+
+                <h3>Easy Ordering</h3>
+
+                <p>
+                    Contact us directly on WhatsApp and place
+                    your order easily.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container cta-content">
+
+        <div>
+
+            <span>
+                CRAVING SOMETHING DELICIOUS?
+            </span>
+
+            <h2>
+                Let's Make Your Day
+                <em>Sweet!</em>
+            </h2>
+
+        </div>
+
+        <a href="https://wa.me/923172171649"
+           target="_blank"
+           class="btn cta-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Order Now
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                GET IN TOUCH
+            </span>
+
+            <h2>
+                Visit or
+                <span>Contact Us</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Our Location</h3>
+
+                <p>
+                    Sector 5L, House No. L86<br>
+                    North Karachi, Pakistan
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    0317 2171649
+                </p>
+
+                <a href="https://wa.me/923172171649"
+                   target="_blank">
+                    Message Us
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <h3>Instagram</h3>
+
+                <p>
+                    @Down_Town.Baker
+                </p>
+
+                <a href="https://www.instagram.com/Down_Town.Baker/"
+                   target="_blank">
+                    Follow Us
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <h3>Facebook</h3>
+
+                <p>
+                    Down_Town.Baker
+                </p>
+
+                <a href="https://www.facebook.com/Down_Town.Baker"
+                   target="_blank">
+                    Visit Page
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </span>
+
+                <span>
+                    <strong>Down Town</strong>
+                    <small>Baker</small>
+                </span>
+
+            </a>
+
+            <p>
+                Freshly baked Pakistani favorites,
+                made with love.
+            </p>
+
+            <div class="socials">
+
+                <a href="https://www.instagram.com/Down_Town.Baker/"
+                   target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/Down_Town.Baker"
+                   target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://wa.me/923172171649"
+                   target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Menu</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Our Specialties</h4>
+
+            <a href="#products">Focaccia Bread</a>
+            <a href="#products">Chicken Bread</a>
+            <a href="#products">Nan Khatai</a>
+            <a href="#products">Brownies</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>
+                Sector 5L, House No. L86<br>
+                North Karachi
+            </p>
+
+            <a href="tel:+923172171649">
+                0317 2171649
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Down Town Baker. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a href="https://wa.me/923172171649"
+   target="_blank"
+   class="floating-whatsapp"
+   aria-label="Order on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
